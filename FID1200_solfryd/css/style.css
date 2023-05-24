@@ -1,0 +1,153 @@
+/* importing selected fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap');
+
+/* Enabling CSS @media Rule to easily enable responsive scaling */
+@media screen {
+}
+
+/* 18px = 1rem */
+html {
+    font-size: 18px;
+    scroll-behavior: smooth; 
+}
+
+
+/* TEXT STYLES */
+
+h1 {
+    font-family: 'Domine', sans-serif;
+    font-size: 3.33rem;
+    color: #402E24;   
+}
+
+h2 {
+    font-family: 'Domine', sans-serif;
+    font-size: 2rem;
+    color: #402E24;   
+}
+
+h3, .header, .sales-points {
+    font-family: 'Domine', sans-serif;
+    font-size: 1.33rem;
+    color: #402E24;   
+}
+
+.p1, .navigation-elments, .gdpr-elments {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.11rem;
+    color: #402E24;   
+}
+
+.link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.11rem;
+    color: #402E24;
+    text-decoration: underline;   
+}
+
+.p2, .copyright-element {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    color: #402E24;   
+}
+
+
+
+/* MOBILE */
+
+.header {
+    background-color: #FFDA8F; /* change color to #FFF4DF when desktop with media rule */
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 4rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+header nav {
+    display: none;
+    align-items: flex-end;
+    width: 50%;
+}
+
+
+.download-intro {
+    background-color: #FFDA8F; /* change color to #FFF4DF when desktop with media rule */
+}
+
+.download-intro .duo-frames, .solfryd-logo-big {
+    display: none;
+}
+
+.the-problem {
+    background-color: #FFDA8F;
+}
+
+.how-app-works {
+    background-color: #FFF4DF;
+}
+
+.user-reviews {
+    background-color: #F0A783;
+}
+
+.sales-points {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}
+
+.sales-points .sale-point {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+    
+}
+
+
+
+.credibility {
+    background-color: #FFF4DF;
+}
+
+footer {
+    background-color: #FFD072;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP */
