@@ -17,30 +17,35 @@ html {
 h1 {
     font-family: 'Domine', sans-serif;
     font-size: 3.33rem;
+    line-height: 140%;
     color: #402E24;   
 }
 
 h2 {
     font-family: 'Domine', sans-serif;
     font-size: 2rem;
+    line-height: 140%;
     color: #402E24;   
 }
 
 h3, .header, .sales-points {
     font-family: 'Domine', sans-serif;
     font-size: 1.33rem;
+    line-height: 140%;
     color: #402E24;   
 }
 
 .p1, .navigation-elments, .gdpr-elments {
     font-family: 'Roboto', sans-serif;
     font-size: 1.11rem;
+    line-height: 140%;
     color: #402E24;   
 }
 
 .link {
     font-family: 'Roboto', sans-serif;
     font-size: 1.11rem;
+    line-height: 140%;
     color: #402E24;
     text-decoration: underline;   
 }
@@ -48,6 +53,7 @@ h3, .header, .sales-points {
 .p2, .copyright-element {
     font-family: 'Roboto', sans-serif;
     font-size: 0.88rem;
+    line-height: 140%;
     color: #402E24;   
 }
 
@@ -114,11 +120,30 @@ header nav {
     
 }
 
-
-
 .credibility {
     background-color: #FFF4DF;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+    align-items: center;
 }
+
+.credibility .logo-fhi-big, .logo-kreftforeningen-big {
+    display: none;
+}
+
+
+/*
+.credibility .logo-fhi-small, .logo-kreftforeningen-small {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+*/
+
 
 footer {
     background-color: #FFD072;
