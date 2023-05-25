@@ -11,6 +11,10 @@ html {
     scroll-behavior: smooth; 
 }
 
+/*
+body {
+    background-color: #FFDA8F; 
+} */
 
 /* TEXT STYLES */
 
@@ -35,6 +39,14 @@ h3, .header, .sales-points {
     color: #402E24;   
 }
 
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    line-height: 140%;
+    color: #402E24;   
+}
+
+
 .p1, .navigation-elments, .gdpr-elments {
     font-family: 'Roboto', sans-serif;
     font-size: 1.11rem;
@@ -50,13 +62,6 @@ h3, .header, .sales-points {
     text-decoration: underline;   
 }
 
-.p2, .copyright-element {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.88rem;
-    line-height: 140%;
-    color: #402E24;   
-}
-
 
 
 /* MOBILE */
@@ -64,7 +69,6 @@ h3, .header, .sales-points {
 .header {
     background-color: #FFDA8F; /* change color to #FFF4DF when desktop with media rule */
 }
-
 
 header {
     display: flex;
@@ -82,9 +86,22 @@ header nav {
     width: 50%;
 }
 
-
 .download-intro {
     background-color: #FFDA8F; /* change color to #FFF4DF when desktop with media rule */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.download-intro h2 {
+    padding: 4rem 2rem 3rem 2rem;
+}
+
+.download-intro .arrow-down {
+    padding: 3rem 0 1rem 0;
 }
 
 .download-intro .duo-frames, .solfryd-logo-big {
@@ -93,39 +110,92 @@ header nav {
 
 .the-problem {
     background-color: #FFDA8F;
+    /* display: flex;  // change this for desktop version
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start; */
+}
+
+.the-problem .friends-in-park {
+    width: 100%;
+}
+
+.the-problem h2 {
+    display: none;
 }
 
 .how-app-works {
     background-color: #FFF4DF;
+    padding-bottom: 10rem;
+}
+
+.how-app-works h1 {
+    display: none;
+}
+
+.how-app-works h2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.how-app-works .user-steps {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 2rem 0 2rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+.how-app-works .sketch-mobile, .sketch-doctor, .sketch-sunny-things {
+    padding: 4rem 0 1rem 0;
 }
 
 .user-reviews {
     background-color: #F0A783;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem; /* change review elements into a carousel if possible - if not keep like this */
+    padding: 5rem 2rem 7rem 2rem;
+}
+
+.user-reviews h2 {
+    background-color: #F0A783;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.user-reviews h1, .p2 {
+    display: none;
 }
 
 .sales-points {
+    background-color: #FFFCF7;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-    gap: 1rem;
     align-items: center;
+    padding: 4rem 0;
 }
 
 .sales-points .sale-point {
     display: flex;
     align-items: center;
-    padding: 1.5rem;
+    padding: 2rem;
     gap: 1rem;
-    
 }
 
 .credibility {
     background-color: #FFF4DF;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    padding: 4rem 1.5rem;
+    padding: 5rem 1.5rem;
     gap: 2rem;
     align-items: center;
 }
@@ -134,28 +204,58 @@ header nav {
     display: none;
 }
 
+.credibility .credibility-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: start;
+    gap: 2rem;
+}
 
-/*
-.credibility .logo-fhi-small, .logo-kreftforeningen-small {
+.credibility .partner-logos-small {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 2.5rem 0 1rem 0;
+    gap: 2rem;
 }
-*/
 
+.credibility .partner-link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
 
 footer {
     background-color: #FFD072;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 5rem 0 3rem 0;
+}
+
+footer .logo-solfryd-big, .p1 {
+    display: none;
 }
 
 
+footer .navigation-elments nav ul, .gdpr-elments nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 2rem 0;
+}
 
 
+footer .navigation-elments .footer-menu, .gdpr-elments .footer-menu {
+    padding: 0.5rem;
+}
 
-
-
-
+footer .copyright {
+    text-align: center;
+    padding-top: 5rem;
+}
 
 
 
@@ -176,3 +276,7 @@ footer {
 
 
 /* DESKTOP */
+/* Using CSS @media Rule to hide/show elements when screen is more than 930px wide */
+@media screen and (min-width: 930px) { 
+    
+}
