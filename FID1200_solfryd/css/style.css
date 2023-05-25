@@ -16,7 +16,7 @@ body {
     background-color: #FFDA8F; 
 } */
 
-/* TEXT STYLES */
+/* * * * * * * TEXT STYLES * * * * * * */
 
 h1 {
     font-family: 'Domine', sans-serif;
@@ -47,7 +47,7 @@ p {
 }
 
 
-.p1, .navigation-elments, .gdpr-elments {
+.p1, .navigation-elments, .gdpr-elments, .review-small-text-p2, .p-credibility {
     font-family: 'Roboto', sans-serif;
     font-size: 1.11rem;
     line-height: 140%;
@@ -58,15 +58,16 @@ p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.11rem;
     line-height: 140%;
-    color: #402E24;
     text-decoration: underline;   
+    color: #402E24;
 }
 
 
 
-/* MOBILE */
+/* * * * * * * MOBILE * * * * * * */
 
-.header, .download-intro {
+/* header */
+.header {
     background-color: #FFDA8F; /* changes to #FFF4DF when more than 932px width (@media Rule) */
 }
 
@@ -82,6 +83,12 @@ header {
 
 header nav {
     display: none;
+}
+
+
+/*  download intro */
+.download-intro {
+    background-color: #FFDA8F; /* changes to #FFF4DF when more than 932px width (@media Rule) */
 }
 
 .download-intro {
@@ -105,6 +112,7 @@ header nav {
     display: none;
 }
 
+/* the problem */
 .the-problem {
     background-color: #FFDA8F;
     /* display: flex;  // change this for desktop version
@@ -118,10 +126,11 @@ header nav {
     width: 100%;
 }
 
-.the-problem h2 {
+.the-problem-text {
     display: none;
 }
 
+/* how the app works */
 .how-app-works {
     background-color: #FFF4DF;
     padding-bottom: 10rem;
@@ -154,6 +163,7 @@ header nav {
     padding: 4rem 0 1rem 0;
 }
 
+/* user reviews */
 .user-reviews {
     background-color: #F0A783;
     display: flex;
@@ -163,16 +173,16 @@ header nav {
     padding: 5rem 2rem 7rem 2rem;
 }
 
-.user-reviews h2 {
-    background-color: #F0A783;
+.user-reviews .review-headline-h2 {
     text-align: center;
     padding-bottom: 3rem;
 }
 
-.user-reviews h1, .p2 {
+.user-reviews .review-intro-text .review-headline-h1, .review-small-text-p2 {
     display: none;
 }
 
+/* sales points */
 .sales-points {
     background-color: #FFFCF7;
     display: flex;
@@ -190,6 +200,7 @@ header nav {
     gap: 1rem;
 }
 
+/* credibility */
 .credibility {
     background-color: #FFF4DF;
     padding: 5rem 1.5rem;
@@ -224,6 +235,7 @@ header nav {
     gap: 0.5rem;
 }
 
+/* footer */
 footer {
     background-color: #FFD072;
     display: flex;
@@ -257,7 +269,7 @@ footer .copyright {
 
 
 
-/* DESKTOP */
+/* * * * * * * DESKTOP * * * * * * */
 
 /* Using CSS @media Rule to hide/show elements when screen is more than 932px wide (iPhone 14 Pro Max) */
 @media screen and (min-width: 932px) { 
@@ -285,20 +297,16 @@ footer .copyright {
         gap: 5rem;
     }
 
-
-
-/* DOWNLOAD INTRO - har en del problemer med denne: */
-
     .download-intro {
         display: flex;
         flex-direction: row;
+        padding: 10rem 0;
     }
 
     .download-intro .download-intro-text .solfryd-logo-big {
         display: flex;
         flex-direction: row;
     }
-
 
     .download-intro .duo-frames {
         display: flex;
@@ -310,9 +318,107 @@ footer .copyright {
         flex-direction: row;
     }
 
-    .download-intro h2 {
+    .download-intro .download-intro-headline {
         padding: 0;
+        align-content: center;
     }
     
+    .the-problem {
+        display: flex;
+        flex-direction: row;
+        float: right;
+    }
 
+    .the-problem .friends-in-park {
+        width: 40%; /* BE OM HJELP: BILDET STREKKER SEG!! align-self: center fungerer ikke */
+    }
+
+    .the-problem .the-problem-text {
+        display: flex;
+        flex-direction: column;
+        padding: 20rem 10rem 10rem 7rem;
+        gap: 5rem;
+    }
+    
+    .user-reviews {
+        padding: rem;
+    }
+
+    .user-reviews .review-intro-text .review-headline-h1, .review-small-text-p2 {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .user-reviews .review-intro-text .review-headline-h2 {
+        display: none;
+    }
+
+    .user-reviews .user-review-boxes {
+        display: flex;
+        flex-direction: row;
+        padding: 3rem 5rem;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    .sales-points .sale-point {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 4rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .credibility {
+        display: flex;
+        flex-direction: row;
+        padding: 10rem 10rem;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .credibility .partner-logos-small {
+        display: none;
+    }
+    
+    .credibility .partner-logos-big { /* Disse vistes før, men vises plutselig ikke lengre likevel ?? */
+        display: flex;
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+
+    .credibility .credibility-text .h2-credibility, .p-credibility{
+        display: flex;
+        flex-direction: column;
+        max-width: 38rem;
+    }
+
+    footer .footer-menu {
+        display: flex;
+        flex-direction: row;
+        padding: 10rem;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    footer .footer-menu .solfryd-funfact .logo-solfryd-small {
+        display: none;
+    }
+    
+    footer .footer-menu .solfryd-funfact .logo-solfryd-big, .p1 {
+        display: flex;
+    }
+
+    footer .footer-menu .solfryd-funfact {
+        display: flex;
+        flex-direction: column; /* logoen strekker seg sånn ut når column her? */
+        padding: 5rem;
+    }
+
+    .footer .copyright {
+        display: flex;
+        justify-content: center;
+    }
 }
+
