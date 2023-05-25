@@ -66,8 +66,8 @@ p {
 
 /* MOBILE */
 
-.header {
-    background-color: #FFDA8F; /* change color to #FFF4DF when desktop with media rule */
+.header, .download-intro {
+    background-color: #FFDA8F; /* changes to #FFF4DF when more than 932px width (@media Rule) */
 }
 
 header {
@@ -82,12 +82,9 @@ header {
 
 header nav {
     display: none;
-    align-items: flex-end;
-    width: 50%;
 }
 
 .download-intro {
-    background-color: #FFDA8F; /* change color to #FFF4DF when desktop with media rule */
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -260,23 +257,62 @@ footer .copyright {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* DESKTOP */
-/* Using CSS @media Rule to hide/show elements when screen is more than 930px wide */
-@media screen and (min-width: 930px) { 
+
+/* Using CSS @media Rule to hide/show elements when screen is more than 932px wide (iPhone 14 Pro Max) */
+@media screen and (min-width: 932px) { 
+
+    .header, .download-intro {
+        background-color: #FFF4DF;
+    }
+
+    header .icon-hamburger {
+        display: none;
+    }
+
+    header {
+        padding: 2rem 7rem;
+    }
     
+    header nav {
+        display: flex;
+    }
+
+    header nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+
+
+/* DOWNLOAD INTRO - har en del problemer med denne: */
+
+    .download-intro {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .download-intro .download-intro-text .solfryd-logo-big {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .download-intro .duo-frames {
+        display: flex;
+        width: auto;
+    }
+
+    .download-intro-text .download-badges { /* får ikke til mellomrom mellom badges!! */
+        display: flex;
+        flex-direction: row;
+    }
+
+    .download-intro h2 {
+        padding: 0;
+    }
+    
+
 }
