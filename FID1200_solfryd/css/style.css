@@ -11,10 +11,11 @@ html {
     scroll-behavior: smooth; 
 }
 
-/*
 body {
-    background-color: #FFDA8F; 
-} */
+    background-color: #FFF4DF; 
+} 
+
+
 
 /* * * * * * * TEXT STYLES * * * * * * */
 
@@ -47,7 +48,7 @@ p {
 }
 
 
-.p1, .navigation-elments, .gdpr-elments, .review-small-text-p2, .p-credibility {
+.p1, .navigation-elments, .gdpr-elments, .review-small-text-p2, .p-credibility, .user-step-text {
     font-family: 'Roboto', sans-serif;
     font-size: 1.11rem;
     line-height: 140%;
@@ -85,6 +86,14 @@ header nav {
     display: none;
 }
 
+header nav ul li:hover {
+    color: #301b1b;
+    text-decoration-line: underline;
+    font-style: italic;
+    transition: color 1s;
+}
+
+
 
 /*  download intro */
 .download-intro {
@@ -98,19 +107,25 @@ header nav {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    position: relative;
+    width: 100%;
 }
 
 .download-intro h2 {
     padding: 4rem 2rem 3rem 2rem;
 }
 
-.download-intro .arrow-down {
-    padding: 3rem 0 1rem 0;
+.arrow-down {
+    position: absolute;
+    bottom: 1rem;
+    margin: 0 auto;
 }
 
 .download-intro .duo-frames, .solfryd-logo-big {
     display: none;
 }
+
+
 
 /* the problem */
 .the-problem {
@@ -130,13 +145,15 @@ header nav {
     display: none;
 }
 
+
+
 /* how the app works */
 .how-app-works {
     background-color: #FFF4DF;
     padding-bottom: 10rem;
 }
 
-.how-app-works h1 {
+.how-app-works .how-app-works-heading {
     display: none;
 }
 
@@ -163,6 +180,8 @@ header nav {
     padding: 4rem 0 1rem 0;
 }
 
+
+
 /* user reviews */
 .user-reviews {
     background-color: #F0A783;
@@ -173,6 +192,13 @@ header nav {
     padding: 5rem 2rem 7rem 2rem;
 }
 
+.user-reviews .user-review-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .user-reviews .review-headline-h2 {
     text-align: center;
     padding-bottom: 3rem;
@@ -181,6 +207,8 @@ header nav {
 .user-reviews .review-intro-text .review-headline-h1, .review-small-text-p2 {
     display: none;
 }
+
+
 
 /* sales points */
 .sales-points {
@@ -200,6 +228,8 @@ header nav {
     gap: 1rem;
 }
 
+
+
 /* credibility */
 .credibility {
     background-color: #FFF4DF;
@@ -208,11 +238,7 @@ header nav {
     align-items: center;
 }
 
-.credibility .logo-fhi-big, .logo-kreftforeningen-big {
-    display: none;
-}
-
-.credibility .credibility-text {
+.credibility-text {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -220,12 +246,16 @@ header nav {
     gap: 2rem;
 }
 
-.credibility .partner-logos-small {
+.partner-logos-small {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2.5rem 0 1rem 0;
     gap: 2rem;
+}
+
+.partner-logos-big {
+    display: none;
 }
 
 .credibility .partner-link {
@@ -234,6 +264,8 @@ header nav {
     flex-wrap: wrap;
     gap: 0.5rem;
 }
+
+
 
 /* footer */
 footer {
@@ -274,7 +306,9 @@ footer .copyright {
 /* Using CSS @media Rule to hide/show elements when screen is more than 932px wide (iPhone 14 Pro Max) */
 @media screen and (min-width: 932px) { 
 
-    .header, .download-intro {
+
+    /* header  */
+    .header {
         background-color: #FFF4DF;
     }
 
@@ -297,15 +331,24 @@ footer .copyright {
         gap: 5rem;
     }
 
+
+
+    /* download intro */
     .download-intro {
+        background-color: #FFF4DF;
         display: flex;
         flex-direction: row;
-        padding: 10rem 0;
+        padding: 10rem 15rem;
+        max-width: 2000px;
+        margin: 0 auto;
     }
 
-    .download-intro .download-intro-text .solfryd-logo-big {
-        display: flex;
-        flex-direction: row;
+    .download-intro-headline {
+        max-width: 350px;
+    }
+
+    .solfryd-logo-big {
+        display: block;
     }
 
     .download-intro .duo-frames {
@@ -322,7 +365,13 @@ footer .copyright {
         padding: 0;
         align-content: center;
     }
-    
+
+    .download-intro-right {
+        padding: 5rem;
+    }
+
+
+    /* the problem */
     .the-problem {
         display: flex;
         flex-direction: row;
@@ -339,7 +388,26 @@ footer .copyright {
         padding: 20rem 10rem 10rem 7rem;
         gap: 5rem;
     }
-    
+
+
+
+    /* how the app works */
+
+    .how-app-works .user-steps { /* UTFORDRING: Hvordan få disse til å stå ved siden av hverandre? */
+        display: flex;
+        flex-direction: column;
+        max-width: 25rem;
+    }
+
+    .how-app-works .review-headline-h1 {
+        display: flex;
+        text-align: center;
+    }
+
+    .how-app-works .review-headline-h2
+
+
+    /* user reviews */
     .user-reviews {
         padding: rem;
     }
@@ -362,6 +430,9 @@ footer .copyright {
         gap: 1.25rem;
     }
 
+
+
+    /* sales points */
     .sales-points .sale-point {
         display: inline-flex;
         flex-direction: row;
@@ -370,6 +441,9 @@ footer .copyright {
         gap: 1rem;
     }
 
+
+
+    /* credibility */
     .credibility {
         display: flex;
         flex-direction: row;
@@ -382,10 +456,14 @@ footer .copyright {
         display: none;
     }
     
-    .credibility .partner-logos-big { /* Disse vistes før, men vises plutselig ikke lengre likevel ?? */
+    .credibility .partner-logos-big { /* UTFORDRING: Logoer vistes før, men vises plutselig ikke lengre likevel ?? */
         display: flex;
         flex-direction: row;
         gap: 0.75rem;
+    }
+
+    .credibility .logo-fhi-big, .logo-kreftforeningen-big {
+        display: block;
     }
 
     .credibility .credibility-text .h2-credibility, .p-credibility{
@@ -394,6 +472,9 @@ footer .copyright {
         max-width: 38rem;
     }
 
+
+
+    /* footer */
     footer .footer-menu {
         display: flex;
         flex-direction: row;
@@ -412,13 +493,17 @@ footer .copyright {
 
     footer .footer-menu .solfryd-funfact {
         display: flex;
-        flex-direction: column; /* logoen strekker seg sånn ut når column her? */
+        flex-direction: column; /* UTFORDRING: logoen strekker seg sånn ut når column her, men blir feil med row? */
         padding: 5rem;
     }
 
     .footer .copyright {
         display: flex;
         justify-content: center;
+    }
+
+    .logo-solfryd-big {
+        width: 10rem;
     }
 }
 
