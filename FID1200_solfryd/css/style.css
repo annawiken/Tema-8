@@ -95,6 +95,17 @@ header nav ul li:hover {
     transition: color 1s;
 }
 
+header nav ul li a:hover {
+    text-decoration: none;
+    color:#402E24;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color:#402E24;
+}
+
+
 .hero {
     background-color: #FFDA8F; 
 }
@@ -324,8 +335,16 @@ footer .navigation-elments nav ul, .gdpr-elments nav ul {
     padding: 2rem 0;
 }
 
-footer .navigation-elments nav ul li:hover, .gdpr-elments nav ul li:hover {
+
+footer .navigation-elments nav ul li a, .gdpr-elments nav ul li a {
+    text-decoration: none;
+    color:#402E24;
+}
+
+
+footer .navigation-elments nav ul li a:hover, .gdpr-elments nav ul li a:hover {
     text-decoration: underline;
+    color:#402E24;
 }
 
 
@@ -338,7 +357,6 @@ footer .copyright {
     text-align: center;
     padding: 0 0 2rem 0;
 }
-
 
 
 
