@@ -22,21 +22,22 @@ body {
 
 h1 {
     font-family: 'Domine', sans-serif;
-    font-size: 3.33rem;
+    font-size: 2.5rem;
     line-height: 140%;
     color: #402E24;   
 }
 
-h2 {
+h2, .the-problem-text {
     font-family: 'Domine', sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    font-weight: 400;
     line-height: 140%;
     color: #402E24;   
 }
 
 h3, .header, .sales-points {
     font-family: 'Domine', sans-serif;
-    font-size: 1.33rem;
+    font-size: 1.1rem;
     line-height: 140%;
     color: #402E24;   
 }
@@ -51,7 +52,7 @@ p {
 
 .p1, .navigation-elments, .gdpr-elments, .review-small-text-p2, .p-credibility, .user-step-text {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.11rem;
+    font-size: 1rem;
     line-height: 140%;
     color: #402E24;   
 }
@@ -85,6 +86,7 @@ header {
 
 header nav {
     display: none;
+    font-size: 1.1rem;
 }
 
 header nav ul li:hover {
@@ -115,6 +117,7 @@ header nav ul li:hover {
 
 .duo-frames-picture {
     display: none;
+    width: 500px;
 }
 
 .download-intro-right {
@@ -138,6 +141,10 @@ header nav ul li:hover {
     align-items: center;
     width: 10rem;
     gap: 1rem;
+}
+
+.download-badges .apple-badge {
+   height: 47px;
 }
 
 .arrow-down {
@@ -175,12 +182,11 @@ header nav ul li:hover {
     display: none;
 }
 
-.how-app-works h2, h1 {
+.how-app-works h2 {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     text-align: center;
-    padding-top: 5rem;
 }
 
 .user-step {
@@ -189,7 +195,7 @@ header nav ul li:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 2.5rem 2rem 2rem 2rem;
+    padding: 2.5rem 1rem 2rem 2rem;
     gap: 1rem;
     text-align: center;
     margin: 0 auto;
@@ -227,6 +233,10 @@ header nav ul li:hover {
 
 .user-reviews .review-intro-text .review-headline-h1, .review-small-text-p2 {
     display: none;
+}
+
+.review-headline-h1 {
+    font-size: 2.5rem;
 }
 
 
@@ -300,7 +310,7 @@ footer .footer-menu, .footer-menu {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    padding: 5rem 0 3rem 0;
+    padding: 6rem 3rem 7rem 3rem;
 }
 
 footer .logo-solfryd-big, .p1 {
@@ -367,7 +377,7 @@ footer .copyright {
         display: flex;
         flex-direction: row;
         justify-content:baseline ;
-        padding: 10rem 15rem;
+        padding: 5rem 17rem;
         max-width: 1440px;
         margin: 0 auto;
     }
@@ -377,7 +387,7 @@ footer .copyright {
     }
 
     .download-intro-headline {
-        max-width: 350px;
+        max-width: 300px;
         text-align: start;
     }
 
@@ -390,7 +400,7 @@ footer .copyright {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .download-intro-right {
@@ -417,7 +427,7 @@ footer .copyright {
     .the-problem .the-problem-text {
         display: flex;
         flex-direction: column;
-        padding: 20rem 10rem 10rem 7rem;
+        padding: 18rem 7rem 10rem 5rem;
         gap: 5rem;
     }
 
@@ -430,7 +440,7 @@ footer .copyright {
         flex-direction: row;
         justify-items: center;
         align-items: center;
-        padding: 2rem 10% 0 10%;
+        padding: 5rem 10% 0 10%;
         gap: 3rem;
     }
 
@@ -441,7 +451,7 @@ footer .copyright {
 
     .how-app-works {
         margin: auto;
-        padding: 65rem 0 10rem 0;
+        padding: 55rem 0 10rem 0;
     }
 
     .how-app-works h2 {
@@ -449,7 +459,9 @@ footer .copyright {
     }
     
     .how-app-works h1 {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     /* user reviews */
@@ -465,14 +477,20 @@ footer .copyright {
         display: none;
     }
 
+
     .user-reviews .user-review-boxes {
         display: flex;
         flex-direction: row;
-        padding: 3rem 5rem;
+        padding: 1rem 5rem;
         justify-content: center;
+        align-items: center;
         gap: 1.25rem;
     }
 
+
+    .user-review-1, .user-review-2, .user-review-3, .user-review-4 {
+        max-width: 14rem;
+    }
 
 
     /* sales points */
@@ -490,9 +508,9 @@ footer .copyright {
     .credibility {
         display: flex;
         flex-direction: row;
-        padding: 10rem;
+        padding: 9rem 7rem;
         align-items: center;
-        gap: 10rem;
+        gap: 3rem;
     }
 
     .credibility .partner-logos-small {
@@ -512,7 +530,7 @@ footer .copyright {
     .credibility .credibility-text .h2-credibility, .p-credibility{
         display: flex;
         flex-direction: column;
-        max-width: 38rem;
+        max-width: 32rem;
     }
 
 
@@ -521,7 +539,7 @@ footer .copyright {
     footer .footer-menu {
         display: flex;
         flex-direction: row;
-        gap: 8rem;
+        gap: 6rem;
     }
 
     footer .footer-menu .solfryd-funfact .logo-solfryd-big, .p1 {
@@ -529,7 +547,7 @@ footer .copyright {
     }
 
     .logo-solfryd-big {
-        width: 12rem;
+        width: 10rem;
     } 
 
     footer .navigation-elments nav ul li, .gdpr-elments nav ul li {
@@ -546,7 +564,7 @@ footer .copyright {
         display: flex;
         flex-direction: column; 
         gap: 2rem;
-        max-width: 32rem;
+        max-width: 28rem;
     } 
 
     .logo-solfryd-small {
